@@ -216,7 +216,7 @@ namespace CNPC
                                 }
                             }
 
-                            int[] TeamOneLocation = new int[10] { 83, 84, 85, 86, 87, 88, 89, 90, 91, 92 }; // Platofrom Locations
+                            int[] TeamOneLocation = new int[10] { 283, 284, 285, 286, 287, 288, 289, 290, 291, 292 }; // Platofrom Locations
                             foreach (int LocationsX in TeamOneLocation)
                             {
                                 if (Terraria.Main.tile[LocationsX, LocationsY + 10].type != Terraria.ID.TileID.Platforms) // Skip Placing If Already Exists
@@ -272,7 +272,7 @@ namespace CNPC
                                 }
                             }
 
-                            int[] TeamOneLocation = new int[10] { 4117, 4116, 4115, 4114, 4113, 4112, 4111, 4110, 4109, 4108 }; // Platofrom Locations Small World
+                            int[] TeamOneLocation = new int[10] { 3917, 3916, 3915, 3914, 3913, 3912, 3911, 3910, 3909, 3908 }; // Platofrom Locations Small World
                             foreach (int LocationsX in TeamOneLocation)
                             {
                                 if (Terraria.Main.tile[LocationsX, LocationsY + 10].type != Terraria.ID.TileID.Platforms) // Skip Placing If Already Exists
@@ -315,7 +315,7 @@ namespace CNPC
                                 }
                             }
 
-                            int[] TeamOneLocation = new int[10] { 6317, 6316, 6315, 6314, 6313, 6312, 6311, 6310, 6309, 6308 }; // Platofrom Locations Medium World
+                            int[] TeamOneLocation = new int[10] { 6117, 6116, 6115, 6114, 6113, 6112, 6111, 6110, 6109, 6108 }; // Platofrom Locations Medium World
                             foreach (int LocationsX in TeamOneLocation)
                             {
                                 if (Terraria.Main.tile[LocationsX, LocationsY + 10].type != Terraria.ID.TileID.Platforms) // Skip Placing If Already Exists
@@ -358,7 +358,7 @@ namespace CNPC
                                 }
                             }
 
-                            int[] TeamOneLocation = new int[10] { 8317, 8316, 8315, 8314, 8313, 8312, 8311, 8310, 8309, 8308 }; // Platofrom Locations Large World
+                            int[] TeamOneLocation = new int[10] { 8117, 8116, 8115, 8114, 8113, 8112, 8111, 8110, 8109, 8108 }; // Platofrom Locations Large World
                             foreach (int LocationsX in TeamOneLocation)
                             {
                                 if (Terraria.Main.tile[LocationsX, LocationsY + 10].type != Terraria.ID.TileID.Platforms) // Skip Placing If Already Exists
