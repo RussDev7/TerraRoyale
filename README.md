@@ -6,6 +6,7 @@ TShock plugin that automatically teams and spaces players out.
 - The CPU determines the required spacing needed for teams and generated platforms.
 - Un-teamed players are added to a random team.
 - Players are teleported to their respected team-colored platforms.
+- Players PvP is enabled.
 
 This is how the CPU determins where to place the teams. Keep in mind the goal is to place players as far away from each other as possible. You are allowed to have two players in one team. The teams will **ALWAYS** follow this order.
 
