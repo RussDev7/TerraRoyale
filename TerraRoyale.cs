@@ -111,7 +111,7 @@ namespace CNPC
             // Ensure Players Exist
             if (playercount <= 1)
             {
-                args.Player.SendErrorMessage("[TeamsFightAdvanced] Less then two players exist! Aborting.");
+                args.Player.SendErrorMessage("[TerraRoyale] Less then two players exist! Aborting.");
                 return;
             }
 
@@ -121,12 +121,13 @@ namespace CNPC
             {
                 if (player == null || !player.Active)
                     continue;
-
+                
                 // Attempt To Throw Unteamed Player Into Team
                 if (player.Team == 0)
                 {
                     // Using Random Number 1-5, Add Player To Team
                     player.SetTeam(Next(1, 5));
+                    player.SendMessage("[TerraRoyale] You have been added to a party!", Microsoft.Xna.Framework.Color.Lime);
                 }
 
                 // Update Array Builder With Players Team
@@ -136,14 +137,16 @@ namespace CNPC
             // Challenge the array to check if all players are in a team
             if (teamlist.Contains(0))
             {
-                args.Player.SendErrorMessage("[TeamsFightAdvanced] Not All Players Are In A Team!");
+                TShock.Log.ConsoleInfo("[TerraRoyale] Not All Players Are In A Team!");
+                args.Player.SendErrorMessage("[TerraRoyale] Not All Players Are In A Team!");
                 return;
             }
 
             // Challenge the array to check if at least two players have unique teams
             if (teamlist.Skip(1).All(s => string.Equals(teamlist[0].ToString(), s.ToString(), StringComparison.InvariantCultureIgnoreCase)))
             {
-                args.Player.SendErrorMessage("[TeamsFightAdvanced] All players are on the same team! Aborting.");
+                TShock.Log.ConsoleInfo("[TerraRoyale] All players are on the same team! Aborting.");
+                args.Player.SendErrorMessage("[TerraRoyale] All players are on the same team! Aborting.");
                 return;
             }
 
@@ -164,7 +167,7 @@ namespace CNPC
                     if (player.Team == 0)
                     {
                         // Player Not In A Team
-                        args.Player.SendErrorMessage("[TeamsFightAdvanced] A player found not in a team! Aborting.");
+                        args.Player.SendErrorMessage("[TerraRoyale] A player found not in a team! Aborting.");
                         break;
                     }
                     else if (player.Team == 1) // Deep Red
@@ -234,6 +237,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                     }
@@ -285,6 +293,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                         else if (WorldGen.lastMaxTilesX == 6400) // Medium World
@@ -323,6 +336,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                         else if (WorldGen.lastMaxTilesX == 8400) // Large World
@@ -361,6 +379,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                     }
@@ -412,6 +435,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                         else if (WorldGen.lastMaxTilesX == 6400) // Medium World
@@ -450,6 +478,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                         else if (WorldGen.lastMaxTilesX == 8400) // Large World
@@ -488,6 +521,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                     }
@@ -539,6 +577,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                         else if (WorldGen.lastMaxTilesX == 6400) // Medium World
@@ -577,6 +620,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                         else if (WorldGen.lastMaxTilesX == 8400) // Large World
@@ -615,6 +663,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                     }
@@ -666,6 +719,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                         else if (WorldGen.lastMaxTilesX == 6400) // Medium World
@@ -704,6 +762,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                         else if (WorldGen.lastMaxTilesX == 8400) // Large World
@@ -742,6 +805,11 @@ namespace CNPC
 
                             // Teleport Player To Respected Platform
                             player.Teleport(GetMedian(TeamOneLocation) * 16, LocationsY * 16 - 48, 1);
+
+                            // Enable Players PvP Status
+                            player.SetPvP(true, false);
+                            player.SendMessage("[TerraRoyale] Your PvP Was Enabled!", Microsoft.Xna.Framework.Color.Lime);
+
                             goto NextPlayer;
                         }
                     }
@@ -756,8 +824,8 @@ namespace CNPC
             }
 
             // Log Finished Actions
-            TShock.Log.ConsoleInfo("[TeamsFightAdvanced] Command ran successfully.");
-            args.Player.SendErrorMessage("[TeamsFightAdvanced] Command ran successfully.");
+            TShock.Log.ConsoleInfo("[TerraRoyale] Command ran successfully.");
+            args.Player.SendErrorMessage("[TerraRoyale] Command ran successfully.");
         }
     }
     
