@@ -16,7 +16,7 @@ This is how the CPU determins where to place the teams. Keep in mind the goal is
 - 2 Unique Teams - Team one starts left ocean, team two stars right ocean.
 - 3 Unique Teams - Team one starts left ocean, team two stars right ocean, team three starts left 50%.
 - 4 Unique Teams - Team one starts left ocean, team two stars right ocean, team three starts left 50%, team four starts right 50%.
-- 5 Unique Teams - Team one starts left ocean, team two stars right ocean, team three starts left 50%, team four starts right 50%, team five starts in middle.```
+- 5 Unique Teams - Team one starts left ocean, team two stars right ocean, team three starts left 50%, team four starts right 50%, team five starts in middle.
 
 ## Permissions
-``battlestart.use``
+``battlestart.use`` - Allows users to use /battlestart
