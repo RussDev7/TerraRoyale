@@ -1,5 +1,5 @@
 # TerraRoyale
-TShock plugin that automatically teams and spaces players out.
+TShock plugin that places unteamed players in teams and evenly spaces everyone out for PvP.
 
 ## About
 - The CMD **/battlestart** is used to initiate the battle.
